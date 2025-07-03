@@ -238,13 +238,6 @@ function App() {
       if (!fromRef || !toRef) return;
       let from = getBoxCenter(fromRef);
       let to = getBoxCenter(toRef, true); // Use left edge for answer
-      if (difficulty !== 'hard') {
-        const verticalOffset = 6;
-        if (Math.abs(from.y - to.y) < 2) {
-          from.y -= verticalOffset;
-          to.y += verticalOffset;
-        }
-      }
       const correct = getCorrectAnswerIdx(qIdx) === aIdx;
       lines.push({
         x1: from.x,
@@ -261,13 +254,6 @@ function App() {
       if (fromRef) {
         let from = getBoxCenter(fromRef);
         let to = { x: tempArrow.to.x - svgDims.left, y: tempArrow.to.y - svgDims.top };
-        if (difficulty !== 'hard') {
-          const verticalOffset = 6;
-          if (Math.abs(from.y - to.y) < 2) {
-            from.y -= verticalOffset;
-            to.y += verticalOffset;
-          }
-        }
         lines.push({
           x1: from.x,
           y1: from.y,
