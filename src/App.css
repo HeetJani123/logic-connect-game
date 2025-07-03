@@ -73,11 +73,14 @@
 
 .connect-box-large {
   min-width: 220px;
-  min-height: 48px;
+  height: 48px;
   font-size: 1.1rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0 1.25rem;
   max-width: 100%;
   word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .connect-box-disabled {
@@ -102,9 +105,12 @@
 
 .connect-box-small {
   min-width: 120px;
-  min-height: 32px;
+  height: 32px;
   font-size: 0.95rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0 0.75rem;
   max-width: 100%;
   word-break: break-word;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
